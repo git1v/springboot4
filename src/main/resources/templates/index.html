@@ -4,12 +4,15 @@
 <meta charset="UTF-8"/>
 <title th:text="${title}"></title>
 <style>
+    h1{font-size:18pt;font-weight:bold;color:gray;}
     body { padding: 10px; color:#666; }
+    pre{border:solid 3px #ddd;padding: 10px}
 </style>
 </head>
 <body>
 	<h1 th:text="${title}"></h1>
 	<p th:text="${msg1}"/>
+	<pre th:text="${data}"></pre>
 	<form method="post" action="/">
 		Name：<input type="text" name="name" />
 		<br />
