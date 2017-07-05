@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title th:text="${title}"></title>
+<style>
+    body { padding: 10px; color:#666; }
+</style>
+</head>
+<body>
+	<h1 th:text="${title}"></h1>
+	<p th:text="${msg1}"/>
+	<form method="post" action="/">
+		Name：<input type="text" name="name" />
+		<br />
+		Mail:<input type="text" name="mail"/>
+		<input type="submit" value="送信する" />
+	</form>
+</body>
+</html>
