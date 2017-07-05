@@ -16,18 +16,5 @@ public class HelloController {
 		mav.addObject("msg1","名前とメールアドレスを入力して下さい。");
 		mav.setViewName("index");
 		return mav;
-	}
-	
-	@RequestMapping(value="/", method=RequestMethod.POST)
-	public ModelAndView send(
-			@RequestParam("name")String name,
-			@RequestParam("mail")String mail,
-			ModelAndView mav){
-		String res="Your Name= "+name+" : Your Mail= "+mail;
-		mav.addObject("title","Result");
-		mav.addObject("msg1",res);
-		mav.setViewName("result");
-		return mav;
-	}
-	
+	}	
 }
