@@ -1,6 +1,7 @@
 package com.rose.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +26,8 @@ public class HelloController {
 		String res="Your Name= "+name+" : Your Mail= "+mail;
 		mav.addObject("title","Result");
 		mav.addObject("msg1",res);
-		mav.setViewName("index");
-		return new ModelAndView("forward:/result");
+		mav.setViewName("result");
+		return mav;
 	}
+	
 }
